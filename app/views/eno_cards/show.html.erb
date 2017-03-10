@@ -1,9 +1,17 @@
-<p id="notice"><%= notice %></p>
+<script type="text/javascript">     
+        $('#content').textfill({
+        maxFontPixels: 100,
+        changeLineHeight: true
+    });
+        });
+</script>
 
-<p>
-  <strong>Text:</strong>
-  <%= @eno_card.text %>
-</p>
+<div id="wrapper" style="width:100hh;height:75vh;-webkit-border-radius: 20px;-moz-border-radius: 20px;border-radius: 20px;border:5px solid #000000;background:rgba(226,227,193,0.5);-webkit-box-shadow: #B3B3B3 9px 9px 9px;-moz-box-shadow: #B3B3B3 9px 9px 9px; box-shadow: #B3B3B3 9px 9px 9px;padding: 15px;text-align: center;vertical-align: middle;">
 
-<%= link_to 'Edit', edit_eno_card_path(@eno_card) %> |
-<%= link_to 'Back', eno_cards_path %>
+<div id="content" style="position: relative;top: 50%;transform: translateY(-50%); ">
+<span>
+<%= @eno_card.text %>
+</span>
+</div>
+</div>
+
