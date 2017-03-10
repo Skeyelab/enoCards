@@ -4,7 +4,9 @@ This is a Ruby on Rails app that will display a random card from Brian Eno's Obl
 Installation
 ------------
 
-`clone this repo`
+install RVM if you like (advised)
+
+clone this repo 
 
 `bundle install`
 
