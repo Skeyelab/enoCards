@@ -43,7 +43,9 @@ group :development, :test do
   gem 'byebug', platform: :mri
 end
 
-gem 'tunemygc'
+gem 'impressionist'
+
+gem 'tunemygc', group: :production
 
 group :development do
   gem 'sqlite3'
