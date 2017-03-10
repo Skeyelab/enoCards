@@ -1,0 +1,22 @@
+<%= form_for(eno_card) do |f| %>
+  <% if eno_card.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(eno_card.errors.count, "error") %> prohibited this eno_card from being saved:</h2>
+
+      <ul>
+      <% eno_card.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :text %>
+    <%= f.text_field :text %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

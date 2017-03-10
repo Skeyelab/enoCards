@@ -1,0 +1,2 @@
+class EnoCard < ApplicationRecord
+end
