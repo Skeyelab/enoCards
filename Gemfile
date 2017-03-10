@@ -43,6 +43,8 @@ group :development, :test do
   gem 'byebug', platform: :mri
 end
 
+gem 'tunemygc'
+
 group :development do
   gem 'sqlite3'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
