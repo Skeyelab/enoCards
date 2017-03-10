@@ -14,7 +14,8 @@ class EnoCardsController < ApplicationController
   end
 
   def show_random
-    binding.pry
+    @card = EnoCard.all.sort_by{rand}.slice(0,1).first
+    impressionist(@card)
   end
 
   # GET /eno_cards/new
