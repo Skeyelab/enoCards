@@ -1,12 +1,13 @@
 This is a Ruby on Rails app that will display a random card from Brian Eno's Oblique Strategies deck.
 
 
---Installation
+Installation
+------------
 
--clone this repo
+`clone this repo`
 
--bundle install
+`bundle install`
 
--rake db:setup
+`rake db:setup`
 
--rails s
+`rails s`
