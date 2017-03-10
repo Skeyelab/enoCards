@@ -2,7 +2,10 @@ Rails.application.routes.draw do
   #resources :eno_cards
   root to: "eno_cards#show_random"
 
+  get '/cards', to: 'eno_cards#index'
+
   get '/:id', to: 'eno_cards#show'
+
 
 
 

@@ -1,9 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Eno Cards</h1>
 
 <table>
-  <thead>
+  <thead style="display: none;">
     <tr>
       <th>Text</th>
       <th colspan="3"></th>
@@ -13,10 +12,7 @@
   <tbody>
     <% @eno_cards.each do |eno_card| %>
       <tr>
-        <td><%= eno_card.text %></td>
-        <td><%= link_to 'Show', eno_card %></td>
-        <td><%= link_to 'Edit', edit_eno_card_path(eno_card) %></td>
-        <td><%= link_to 'Destroy', eno_card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><a href="/<%= eno_card.id %>"><%= eno_card.text %></a></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +20,3 @@
 
 <br>
 
-<%= link_to 'New Eno Card', new_eno_card_path %>
