@@ -1,6 +1,6 @@
 class EnoCardsController < ApplicationController
   before_action :set_eno_card, only: [:show, :edit, :update, :destroy]
-
+  impressionist :actions=>[:counts]
   # GET /eno_cards
   # GET /eno_cards.json
   def index
@@ -11,6 +11,11 @@ class EnoCardsController < ApplicationController
   # GET /eno_cards/1.json
   def show
 
+  end
+
+  def counts
+    @eno_cards = EnoCard.order('impressions_count DESC')
+    #binding.pry
   end
 
   def show_random
