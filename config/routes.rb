@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: "eno_cards#show_random"
 
   get '/cards', to: 'eno_cards#index'
+  get '/counts', to: 'eno_cards#counts'
 
   get '/:id', to: 'eno_cards#show'
 
