@@ -14,7 +14,7 @@ class EnoCardsController < ApplicationController
   end
 
   def counts
-    @eno_cards = EnoCard.order('impressions_count DESC')
+    @eno_cards = EnoCard.order('impressions_count DESC').where('impressions_count > 0')
     #binding.pry
   end
 
