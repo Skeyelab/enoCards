@@ -12,6 +12,12 @@ class EnoCardsController < ApplicationController
 
   end
 
+  def verify
+    @eno_cards = EnoCard.order(impressions_count: :desc).where('impressions_count > 0')
+    #binding.pry
+  end
+
+
   def counts
     @eno_cards = EnoCard.order(impressions_count: :desc).where('impressions_count > 0')
     #binding.pry
