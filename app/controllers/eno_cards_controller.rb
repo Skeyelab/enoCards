@@ -1,6 +1,5 @@
 class EnoCardsController < ApplicationController
   before_action :set_eno_card, only: [:show, :edit, :update, :destroy]
-  impressionist :actions=>[:counts]
   # GET /eno_cards
   # GET /eno_cards.json
   def index
