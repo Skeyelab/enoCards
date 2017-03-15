@@ -1,25 +1,25 @@
 <script type="text/javascript">
   setInterval(function() {
-              window.location.reload();
-          }, 600000);
-          $(document).ready(function() {
-              // document.onclick = function() {
-              //     location.reload();
-              // };
-              // document.ontouch = function() {
-              //     location.reload();
-              // };
-              $('#wrapper').click(function() {
-                  location.reload();
-              });
-              $('#content').textfill({
-                  maxFontPixels: 100,
-                  changeLineHeight: true
-              });
-          });
+                window.location.reload();
+            }, 600000);
+            $(document).ready(function() {
+                // document.onclick = function() {
+                //     location.reload();
+                // };
+                // document.ontouch = function() {
+                //     location.reload();
+                // };
+                $('#wrapper').click(function() {
+                    location.reload();
+                });
+                $('#content').textfill({
+                    maxFontPixels: 100,
+                    changeLineHeight: true
+                });
+            });
 </script>
 <div id="wrapper" style="overflow:hidden;width:100hh;height:70vh;-webkit-border-radius: 20px;-moz-border-radius: 20px;border-radius: 20px;border:5px solid #000000;background:rgba(226,227,193,0.5);-webkit-box-shadow: #B3B3B3 9px 9px 9px;-moz-box-shadow: #B3B3B3 9px 9px 9px; box-shadow: #B3B3B3 9px 9px 9px;padding: 15px;text-align: center;vertical-align: middle;">
   <div id="content" style="position: relative;top: 50%;transform: translateY(-50%);">
-    <span><%= @eno_card.text %></span>
+    <span><%=raw @eno_card.text %></span>
   </div>
 </div>
