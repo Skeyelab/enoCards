@@ -3,7 +3,7 @@ class EnoCardsController < ApplicationController
   # GET /eno_cards
   # GET /eno_cards.json
   def index
-    @eno_cards = EnoCard.all
+    @eno_cards = EnoCard.order(:text).all
   end
 
   # GET /eno_cards/1
@@ -12,8 +12,14 @@ class EnoCardsController < ApplicationController
 
   end
 
+  def verify
+    @eno_cards = EnoCard.order(impressions_count: :desc).where('impressions_count > 0')
+    #binding.pry
+  end
+
+
   def counts
-    @eno_cards = EnoCard.order('impressions_count DESC').where('impressions_count > 0')
+    @eno_cards = EnoCard.order(impressions_count: :desc).where('impressions_count > 0')
     #binding.pry
   end
 

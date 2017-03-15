@@ -1,6 +1,4 @@
 <p id="notice"><%= notice %></p>
-
-
 <table>
   <thead style="display: none;">
     <tr>
@@ -8,12 +6,11 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
   <tbody>
     <% @eno_cards.each do |eno_card| %>
       <tr>
         <td><%= eno_card.text %></td>
-        <td><%= eno_card.impressionist_count %></td>
+        <td><%= eno_card.impressions_count %></td>
       </tr>
     <% end %>
   </tbody>
