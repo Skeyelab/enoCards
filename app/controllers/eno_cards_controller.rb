@@ -24,7 +24,7 @@ class EnoCardsController < ApplicationController
   end
 
   def show_random
-    @eno_card = EnoCard.all.sort_by{rand}.slice(0,1).first
+    @eno_card = EnoCard.where(impressions_count: EnoCard.order(impressions_count: :asc).first.impressions_count).sort_by{rand}.slice(0,1).first
     impressionist(@eno_card)
   end
 
