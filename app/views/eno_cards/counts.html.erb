@@ -9,7 +9,7 @@
   <tbody>
     <% @eno_cards.each do |eno_card| %>
       <tr>
-        <td><%= eno_card.text %></td>
+        <td><%= strip_tags eno_card.text %></td>
         <td><%= eno_card.impressions_count %></td>
       </tr>
     <% end %>
