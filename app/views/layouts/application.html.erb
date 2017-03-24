@@ -3,19 +3,16 @@
   <head>
     <title>Brian Eno's Oblique Strategies</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
     <%= yield %>
-<!--Footer-->
-
-<div id="footer">
-    <h3 class="copyright">Developed by <a href="https://github.com/Skeyelab">Eric Dahl</a> - v<%= Version.current %></h3>
-    <h1 class="credit">Brian Eno's Oblique Strategies</h3>
-    <div style="clear: both"></div>
-</div>
+    <!--Footer-->
+    <div id="footer">
+      <h3 class="copyright">Developed by <a href="https://github.com/Skeyelab">Eric Dahl</a> - v<%= Version.current %></h3>
+      <h1 class="credit"><a href="https://en.wikipedia.org/wiki/Oblique_Strategies" target="_blank">Brian Eno's Oblique Strategies</a></h3>
+      <div style="clear: both"></div>
+    </div>
   </body>
 </html>

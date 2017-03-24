@@ -48,6 +48,8 @@ end
 gem 'impressionist'
 
 gem 'tunemygc', group: :production
+gem 'scout_apm', group: :production
+
 
 group :development do
   gem "rails-erd"

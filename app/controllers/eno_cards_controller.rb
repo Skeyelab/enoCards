@@ -19,12 +19,12 @@ class EnoCardsController < ApplicationController
 
 
   def counts
-    @eno_cards = EnoCard.order(impressions_count: :desc).where('impressions_count > 0')
+    @eno_cards = EnoCard.order(impressions_count: :desc, text: :asc).where('impressions_count > 0')
     #binding.pry
   end
 
   def show_random
-    @eno_card = EnoCard.all.sort_by{rand}.slice(0,1).first
+    @eno_card = EnoCard.where(impressions_count: EnoCard.order(impressions_count: :asc).first.impressions_count).sort_by{rand}.slice(0,1).first
     impressionist(@eno_card)
   end
 
