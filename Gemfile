@@ -45,7 +45,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
 end
 
-gem 'impressionist'
+gem 'impressionist', '~>1.6.1'
 
 gem 'tunemygc', group: :production
 gem 'scout_apm', group: :production
