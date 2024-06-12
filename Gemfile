@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.6.6'
+ruby '3.1.3'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -9,8 +9,11 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.4.3'
+gem 'rails', '~> 6'
 gem 'pg'
+gem 'sqlite3', '~> 1.4'
+
+
 gem 'rails_12factor', group: :production
 # Use Puma as the app server
 gem "puma", ">= 4.3.8"
@@ -45,15 +48,14 @@ group :development, :test do
   gem 'byebug', platform: :mri
 end
 
-gem 'impressionist', '~>1.6.1'
+gem 'impressionist'
 
 gem 'tunemygc', group: :production
 gem 'scout_apm', group: :production
 
 
 group :development do
-  gem "rails-erd"
-  gem 'sqlite3'
+#  gem "rails-erd"
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.0.5'
