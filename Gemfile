@@ -9,7 +9,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6'
+gem 'rails', '~> 7.0.0'
 gem 'pg'
 gem 'sqlite3', '~> 1.4'
 

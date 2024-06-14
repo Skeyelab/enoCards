@@ -10,12 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_06_12_173229) do
-
+ActiveRecord::Schema[7.0].define(version: 2024_06_14_175102) do
   create_table "eno_cards", force: :cascade do |t|
     t.string "text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.integer "impressions_count", default: 0
   end
 
@@ -32,8 +31,8 @@ ActiveRecord::Schema.define(version: 2024_06_12_173229) do
     t.text "message"
     t.text "referrer"
     t.text "params"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", precision: nil
+    t.datetime "updated_at", precision: nil
     t.index ["controller_name", "action_name", "ip_address"], name: "controlleraction_ip_index"
     t.index ["controller_name", "action_name", "request_hash"], name: "controlleraction_request_index"
     t.index ["controller_name", "action_name", "session_hash"], name: "controlleraction_session_index"
