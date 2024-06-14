@@ -50,8 +50,8 @@ end
 
 gem 'impressionist'
 
-gem 'tunemygc', group: :production
-gem 'scout_apm', group: :production
+# gem 'tunemygc', group: :production
+# gem 'scout_apm', group: :production
 
 
 group :development do
