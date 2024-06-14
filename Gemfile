@@ -13,6 +13,7 @@ gem 'rails', '~> 7.0.0'
 gem 'pg'
 gem 'sqlite3', '~> 1.4'
 
+
 gem 'rails_12factor', group: :production
 # Use Puma as the app server
 gem "puma", ">= 4.3.8"
